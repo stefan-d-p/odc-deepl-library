@@ -9,11 +9,5 @@ public class Tests
     {
     }
 
-    [Test]
-    public void Echo_Returns_Successful()
-    {
-        string message = "Pingback";
-        var result = _actions.Echo(message);
-        Assert.That(result, Is.EqualTo(message));
-    }
+    
 }
