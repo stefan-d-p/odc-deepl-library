@@ -1,12 +1,12 @@
 ﻿using OutSystems.ExternalLibraries.SDK;
 
-namespace Without.Systems.DeepL.Structures;
+namespace Without.Systems.DeepLTranslate.Structures;
 
 /// <summary>
 /// Glossary Entry Structure
 /// </summary>
 [OSStructure(Description = "Single glossary entry")]
-public struct GlossaryEntry
+public struct DeepLGlossaryEntry
 {
     
     /// <summary>
@@ -26,4 +26,10 @@ public struct GlossaryEntry
         DataType = OSDataType.Text,
         IsMandatory = true)]
     public string Target;
+
+    public DeepLGlossaryEntry(string source, string target)
+    {
+        Source = source;
+        Target = target;
+    }
 }

@@ -1,12 +1,12 @@
 ﻿using OutSystems.ExternalLibraries.SDK;
 
-namespace Without.Systems.DeepL.Structures;
+namespace Without.Systems.DeepLTranslate.Structures;
 
 /// <summary>
 /// Glossary Info Structure
 /// </summary>
 [OSStructure(Description = "Glossary Info Structure")]
-public struct GlossaryInfo
+public struct DeepLGlossaryInfo
 {
     [OSStructureField(
         Description = "Identifier of the glossary",
@@ -42,4 +42,17 @@ public struct GlossaryInfo
         Description = "Entry Count",
         DataType = OSDataType.Integer)]
     public int Count;
+
+    public DeepLGlossaryInfo(string id, bool ready, string name, string sourceLang, string targetLang, DateTime createdOn,
+        int count)
+    {
+        Id = id;
+        Ready = ready;
+        Name = name;
+        SourceLang = sourceLang;
+        TargetLang = targetLang;
+        CreatedOn = createdOn;
+        Count = count;
+    }
+    
 }

@@ -4,8 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <AssemblyName>Without.Systems.DeepL.Library</AssemblyName>
-        <RootNamespace>Without.Systems.DeepL</RootNamespace>
+        <AssemblyName>Without.Systems.DeepLTranslate.Library</AssemblyName>
+        <RootNamespace>Without.Systems.DeepLTranslate</RootNamespace>
         <Company>without.systems</Company>
         <Product>DeepL SDK External Logic Library</Product>
     </PropertyGroup>
@@ -16,7 +16,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Resources\"/>
+      <None Remove="Resources\DeepL.png" />
+      <EmbeddedResource Include="Resources\DeepL.png" />
     </ItemGroup>
 
 </Project>
