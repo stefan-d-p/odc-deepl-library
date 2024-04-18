@@ -51,7 +51,7 @@ public class OSDeepL : IOSDeepL
         
         using (Translator translator = new Translator(authKey, _translatorOptions))
         {
-            TextResult[] result = AsyncUtil.RunSync<TextResult[]>(() => translator.TranslateTextAsync(texts, sourceLang, targetLang, options));
+            TextResult[] result = AsyncUtil.RunSync(() => translator.TranslateTextAsync(texts, sourceLang, targetLang, options));
             IEnumerable<DeepLTextTranslation> translations =
                 result.Select(r => new DeepLTextTranslation(r.DetectedSourceLanguageCode, r.Text));
             return translations.ToList();
