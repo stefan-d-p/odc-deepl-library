@@ -20,7 +20,7 @@ public class OSDeepL : IOSDeepL
         };
         _translatorOptions.MaximumNetworkRetries = 3;
     }
-    
+
     public DeepLAccountUsage GetAccountUsage(string authKey)
     {
         using (Translator translator = new Translator(authKey, _translatorOptions))
